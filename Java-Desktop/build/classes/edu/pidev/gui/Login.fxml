@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+    <children>
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url('file:C:/Users/Amine/Documents/NetBeansProjects/pi_java/src/Media/bg1.jpg'); -fx-background-repeat: no-repeat; -fx-background-size: cover;">
+         <children>
+            <TextField fx:id="username" layoutX="363.0" layoutY="215.0" prefHeight="67.0" prefWidth="299.0" promptText="Pseudo ou email" />
+            <PasswordField fx:id="mdp" layoutX="363.0" layoutY="317.0" prefHeight="67.0" prefWidth="299.0" promptText="Mot de passe " />
+            <Label layoutX="438.0" layoutY="147.0" text="S'authentifier" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font></Label>
+            <Label layoutX="72.0" layoutY="679.0" prefHeight="38.0" prefWidth="245.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Make your day easier ..." />
+            <ImageView fitHeight="125.0" fitWidth="263.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Media/Logo_ESPRIT_-_Tunisie.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="189.0" fitWidth="263.0" layoutX="747.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Media/entraide.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="127.0" layoutY="511.0" text="Vous n'êtes pas membre?">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="411.0" layoutY="726.0" prefHeight="21.0" prefWidth="161.0" text="DaVinci Coders © 2018" />
+            <JFXButton fx:id="login" layoutX="399.0" layoutY="401.0" onAction="#login" prefHeight="50.0" prefWidth="100.0" />
+            <JFXButton fx:id="btnannuler" layoutX="523.0" layoutY="401.0" onAction="#annuler" prefHeight="50.0" prefWidth="100.0" />
+            <JFXButton fx:id="register" layoutX="462.0" layoutY="504.0" onAction="#register" prefHeight="50.0" prefWidth="100.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

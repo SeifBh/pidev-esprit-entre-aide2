@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.AfficherAnnonceGridController">
+   <top>
+      <MenuBar BorderPane.alignment="TOP_LEFT" />
+   </top>
+   <left>
+      <VBox prefHeight="571.0" prefWidth="306.0" spacing="10.0" styleClass="background" stylesheets="@afficherAnnonceGrid.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Ajouter une annonce" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfIdUser" focusTraversable="false" promptText="Id User" />
+            <TextField fx:id="tfTitre" promptText="Titre" />
+            <TextField fx:id="tfDescription" promptText="Description" />
+            <Label text="Categorie" />
+            <ListView fx:id="lvCategorie" prefHeight="93.0" prefWidth="296.0" />
+            <TextField fx:id="tfNumTel" promptText="Numero de telphone" />
+            <Label fx:id="nonResolue" prefHeight="17.0" prefWidth="309.0" style="-fx-background-color: #ff9800;" text="Etat: Non Resolue" />
+            <Label fx:id="resolue" prefHeight="14.0" prefWidth="296.0" style="-fx-background-color: #42f44b;" text="Etat: Resolue" />
+            <ChoiceBox fx:id="cbEtat" prefWidth="150.0" />
+            <Button fx:id="btnEnregModif" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#enregistrerModification" prefHeight="31.0" prefWidth="192.0" style="-fx-text-fill: black;" styleClass="btnEnregistrer" stylesheets="@afficherAnnonceGrid.css" text="Enregistrer Modification" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+               </effect>
+            </Button>
+            <HBox prefHeight="30.0" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnAjouter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ajouter" prefHeight="30.0" prefWidth="75.0" styleClass="btnAjout" stylesheets="@afficherAnnonceGrid.css" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="reset" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: white;" text="Annuler">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                     </effect>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="110.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_RIGHT" prefHeight="571.0" prefWidth="692.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="43.0" prefWidth="472.0">
+               <children>
+                  <Button fx:id="btnModif" mnemonicParsing="false" onAction="#modifier" prefHeight="30.0" prefWidth="100.0" styleClass="background" stylesheets="@afficherAnnonceGrid.css" text="Modifier" textFill="#fff9f9" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#00000091" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btnLogout1" mnemonicParsing="false" onAction="#supprimerAnnonce" prefHeight="30.0" prefWidth="100.0" styleClass="btnSupprimer" stylesheets="@afficherAnnonceGrid.css" text="Supprimer" textFill="#fff9f9" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#00000091" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btnRefrech" mnemonicParsing="false" onAction="#RefrechTable" prefHeight="31.0" prefWidth="100.0" text="Refrech" />
+               </children>
+            </HBox>
+            <TableView fx:id="listAnnonce" prefHeight="561.0" prefWidth="675.0" stylesheets="@register.css">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="vide" />
+                  <TableColumn fx:id="iduser" prefWidth="47.0" text="Id User" />
+                  <TableColumn fx:id="titre" prefWidth="89.0" text="Titre" />
+                  <TableColumn fx:id="desc" prefWidth="183.0" text="Description" />
+                  <TableColumn fx:id="cat" text="Categorie" />
+                  <TableColumn fx:id="date" prefWidth="102.0" text="Date Creation" />
+                  <TableColumn fx:id="dateM" prefWidth="75.0" text="Date Modif" />
+                  <TableColumn fx:id="numtel" prefWidth="75.0" text="Num Tel" />
+                  <TableColumn fx:id="etat" prefWidth="73.0" text="Etat" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

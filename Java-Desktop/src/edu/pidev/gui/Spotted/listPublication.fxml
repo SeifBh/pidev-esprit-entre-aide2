@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.Spotted.ListPublicationController">
+    <children>
+      <Pane fx:id="P1" layoutX="14.0" layoutY="24.0" prefHeight="169.0" prefWidth="168.0">
+         <children>
+            <Button fx:id="BT1" layoutX="67.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail1" visible="false" />
+            <Label fx:id="TF1" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="134.0" text="Desc:" />
+            <Label fx:id="TAG1" layoutX="14.0" layoutY="49.0" prefHeight="17.0" prefWidth="123.0" text="Tags = " />
+         </children>
+      </Pane>
+      <Pane fx:id="P2" layoutX="216.0" layoutY="34.0" prefHeight="169.0" prefWidth="168.0">
+         <children>
+            <Button fx:id="BT2" layoutX="67.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail1" visible="false" />
+            <Label fx:id="TF2" layoutX="-4.0" layoutY="6.0" prefHeight="101.0" prefWidth="175.0" />
+            <Label fx:id="TAG2" layoutX="23.0" layoutY="85.0" prefHeight="17.0" prefWidth="123.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="P3" layoutX="407.0" layoutY="34.0" prefHeight="169.0" prefWidth="168.0">
+         <children>
+            <Button fx:id="BT3" layoutX="67.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail1" visible="false" />
+            <Label fx:id="TF3" layoutX="-4.0" layoutY="6.0" prefHeight="101.0" prefWidth="175.0" />
+            <Label fx:id="TAG3" layoutX="23.0" layoutY="85.0" prefHeight="17.0" prefWidth="123.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="P4" layoutX="22.0" layoutY="200.0" prefHeight="169.0" prefWidth="168.0">
+         <children>
+            <Button fx:id="BT4" layoutX="67.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail1" visible="false" />
+            <Label fx:id="TF4" layoutX="-4.0" layoutY="6.0" prefHeight="101.0" prefWidth="175.0" />
+            <Label fx:id="TAG4" layoutX="23.0" layoutY="85.0" prefHeight="17.0" prefWidth="123.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="P5" layoutX="216.0" layoutY="203.0" prefHeight="169.0" prefWidth="168.0">
+         <children>
+            <Button fx:id="BT5" layoutX="67.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail1" visible="false" />
+            <Label fx:id="TF5" layoutX="-4.0" layoutY="6.0" prefHeight="101.0" prefWidth="175.0" />
+            <Label fx:id="TAG5" layoutX="23.0" layoutY="85.0" prefHeight="17.0" prefWidth="123.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="P6" layoutX="407.0" layoutY="203.0" prefHeight="169.0" prefWidth="168.0">
+         <children>
+            <Button fx:id="BT6" layoutX="67.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail1" visible="false" />
+            <Label fx:id="TF6" layoutX="-4.0" layoutY="6.0" prefHeight="101.0" prefWidth="175.0" />
+            <Label fx:id="TAG6" layoutX="23.0" layoutY="85.0" prefHeight="17.0" prefWidth="123.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

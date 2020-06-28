@@ -1,0 +1,104 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-border-color : grey;
+}
+.paneS{
+    -fx-background-color:red;
+}
+#pbId{
+    -fx-background-color:white;
+}
+
+
+
+#tags{
+    -fx-color:red;
+
+}
+#idsep{
+    -fx-color:red;
+    -fx-background-color:rgb(244,244,244);
+   
+    
+
+}
+#idsepcom{
+    -fx-color:red;
+    -fx-background-color:white;
+    -fx-font-size:2;
+    -fx-height:2;
+   
+    
+
+}
+
+#desc{
+        -fx-color:red;
+     
+    
+}
+#septa{
+    -fx-background-color:white;
+     
+    
+}
+#nomuser{
+    -fx-font-size:14;
+}
+#sex{
+    -fx-margin:200;
+    -fx-padding:800;
+}
+#appme{
+    -fx-background-color:red;
+   
+       -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+    -fx-display: block;
+}
+.scroll-bar:vertical {
+    -fx-pref-height: 26.5;
+    -fx-padding: 7;
+}
+.scroll-bar::-webkit-scrollbar-thumb { /* leave most bars alone */
+    background-color: red;
+}
+.scroll-bar:horizontal {
+    -fx-pref-height: 26.5;
+    -fx-padding: 7;
+}
+
+.scroll-bar, .scroll-bar:pressed, .scroll-bar:focused {
+    -fx-background-color:rgb(244,244,244);
+
+    -fx-font-size: 15;
+}
+#imageId{
+    -fx-width: 800;
+    fx-padding-left:510;
+}
+#btnphoto{
+        -fx-background-color: #00BBE2;
+            -fx-text-fill: white;
+
+}
+#btnpub{
+        -fx-background-color: #E51400;
+            -fx-text-fill: white;
+
+
+}
+.btn-filter{
+    -fx-text-decoration: none;
+            -fx-text-fill: white;
+                    -fx-background-color: #26a69a;
+
+    -fx-text-align: center;
+    -fx-letter-spacing: .5px;
+    -fx-transition: .2s ease-out;
+    -fx-cursor: pointer;
+}

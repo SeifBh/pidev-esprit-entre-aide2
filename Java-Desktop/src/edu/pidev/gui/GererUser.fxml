@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="508.0" prefWidth="639.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.GererUserController">
+    <stylesheets>
+        <URL value="@gereruser.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1000.0">
+         <top>
+            <MenuBar BorderPane.alignment="TOP_LEFT" />
+         </top>
+         <left>
+            <VBox prefHeight="571.0" prefWidth="306.0" spacing="10.0" styleClass="background" stylesheets="@gereruser.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Ajouter une annonce" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="username" prefHeight="31.0" prefWidth="194.0" promptText="Pseudo" />
+                  <TextField fx:id="tfnom" prefHeight="25.0" prefWidth="194.0" promptText="Nom" />
+                  <TextField fx:id="tfprenom" prefHeight="25.0" prefWidth="194.0" promptText="Prénom" />
+                  <TextField fx:id="tfmail" prefHeight="25.0" prefWidth="194.0" promptText="E-mail" />
+                  <ListView fx:id="lvrole" prefHeight="94.0" prefWidth="194.0" style="-fx-border-color: #000000;" />
+                  <Group>
+                     <children>
+                        <RadioButton fx:id="rsexe1" mnemonicParsing="false" text="male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexegroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rsexe2" layoutY="40.0" mnemonicParsing="false" text="female">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexegroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                  </Group>
+                  <PasswordField fx:id="tfmdp1" prefHeight="26.0" prefWidth="194.0" promptText="Mot de passe " />
+                  <HBox prefHeight="30.0" prefWidth="250.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnAjouter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ajout" prefHeight="30.0" prefWidth="75.0" styleClass="btnAjout" stylesheets="@gereruser.css" text="Ajouter" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="reset" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #3b3c3d;" text="Annuler">
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                           </effect>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="110.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="btnEnregModif" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#enregistrerModification" prefHeight="31.0" prefWidth="192.0" style="-fx-text-fill: black;" styleClass="btnEnregistrer" stylesheets="@../../../../../../../Desktop/Aujourd'hui/PIDEV/JAVA/pidev_java_Test/pidev_java_Test/src/edu/pidev/gui/afficherAnnonceGrid.css" text="Enregistrer Modification" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                     </effect>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <VBox alignment="TOP_RIGHT" prefHeight="571.0" prefWidth="692.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="43.0" prefWidth="472.0">
+                     <children>
+                        <Button fx:id="retour" mnemonicParsing="false" onAction="#btnRetourOnClick" prefHeight="30.0" prefWidth="56.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Media/hidemenu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnModif" mnemonicParsing="false" onAction="#modifier" prefHeight="30.0" prefWidth="100.0" styleClass="background" stylesheets="@gereruser.css" text="Modifier" textFill="#fff9f9" textOverrun="CLIP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#00000091" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnLogout1" mnemonicParsing="false" onAction="#supprimerUser" prefHeight="30.0" prefWidth="100.0" styleClass="btnSupprimer" stylesheets="@gereruser.css" text="Supprimer" textFill="#fff9f9" textOverrun="CLIP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#00000091" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnRefrech" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Refrech" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="listUser" prefHeight="561.0" prefWidth="675.0">
+                     <columns>
+                        <TableColumn fx:id="idUser" prefWidth="75.0" text="Id User" />
+                        <TableColumn fx:id="pseudo" prefWidth="104.0" text="Pseudo" />
+                        <TableColumn fx:id="nom" prefWidth="106.0" text="Nom" />
+                        <TableColumn fx:id="prenom" prefWidth="103.0" text="Prenom" />
+                        <TableColumn fx:id="email" prefWidth="130.0" text="E_mail" />
+                        <TableColumn fx:id="role" prefWidth="135.0" text="Role" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

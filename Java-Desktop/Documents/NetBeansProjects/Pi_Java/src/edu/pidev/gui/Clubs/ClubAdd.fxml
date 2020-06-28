@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:C:/Users/radhwen/Documents/NetBeansProjects/pi_java/src/Media/bg1.jpg'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.Clubs.ClubAddController">
+    <stylesheets>
+        <URL value="@clubadd.css" />
+    </stylesheets>
+     <children>
+       <AnchorPane fx:id="menu" layoutY="202.0" prefHeight="552.0" prefWidth="114.0">
+         <children>
+            <JFXButton fx:id="logout" layoutX="25.0" layoutY="475.0" onAction="#logout" />
+            <JFXButton fx:id="clubs" layoutX="25.0" layoutY="141.0" onAction="#clubs" />
+            <JFXButton fx:id="spotted" layoutX="25.0" layoutY="386.0" onAction="#spotted" />
+            <JFXButton fx:id="home" buttonType="RAISED" layoutX="25.0" layoutY="50.0" onAction="#home" />
+            <JFXButton fx:id="events" layoutX="29.0" layoutY="219.0" onAction="#events" />
+            <JFXButton fx:id="stores" layoutX="29.0" layoutY="305.0" onAction="#store" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Media/Logo_ESPRIT_-_Tunisie.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="801.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Media/entraide.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="422.0" layoutY="89.0" text="Clubs" textFill="#fa0000">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="730.0" prefHeight="21.0" prefWidth="161.0" text="DaVinci Coders © 2018" />
+       <JFXButton fx:id="hideMenu" layoutX="25.0" layoutY="126.0" onAction="#hidemenu" />
+      <JFXButton fx:id="showMenu" layoutX="25.0" layoutY="126.0" onAction="#showmenu" />
+   </children>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <children>
+      <Label layoutX="412.0" layoutY="259.0" text="id_user" />
+      <Label layoutX="411.0" layoutY="288.0" text="Nom de Club" />
+      <Label layoutX="411.0" layoutY="318.0" text="Mail de Club" />
+      <Label layoutX="415.0" layoutY="481.0" text="Description de Club" />
+      <Label layoutX="411.0" layoutY="350.0" text="Image" />
+      <Label layoutX="411.0" layoutY="418.0" text="Nombre de membres" />
+      <TextField fx:id="tfNOMDECLUB" layoutX="535.0" layoutY="284.0" promptText="Nom" />
+      <TextField fx:id="tfMAILDECLUB" layoutX="535.0" layoutY="314.0" promptText="Inserer le Mail de club" />
+      <TextArea fx:id="tfDESCRIPTION" layoutX="537.0" layoutY="471.0" prefHeight="68.0" prefWidth="149.0" />
+     <ImageView fx:id="ImageClub" fitHeight="58.0" fitWidth="76.0" layoutX="535.0" layoutY="350.0" onMouseClicked="#AddImage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Media/ajoutlogo.png" />
+         </image>
+      </ImageView>
+      
+      
+      
+      <TextField fx:id="tfNBR" layoutX="535.0" layoutY="414.0" />
+      <Button fx:id="btAJOUTER" layoutX="629.0" layoutY="554.0" mnemonicParsing="false" onAction="#Ajout" text="Ajouter" />
+      <Button fx:id="btAff" layoutX="688.0" layoutY="554.0" mnemonicParsing="false" onAction="#Afficher" text="Afficher" />
+      <ImageView fx:id="verif_NOMDECLUB" fitHeight="17.0" fitWidth="17.0" layoutX="498.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_MAILDECLUB" fitHeight="17.0" fitWidth="17.0" layoutX="535.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_IMG" fitHeight="17.0" fitWidth="17.0" layoutX="498.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_IDUSER" fitHeight="17.0" fitWidth="17.0" layoutX="498.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_NBR" fitHeight="17.0" fitWidth="17.0" layoutX="498.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_NOMDECLUB5" fitHeight="17.0" fitWidth="17.0" layoutX="498.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="692.0" layoutY="318.0" text="\@esprit.tn" />
+      <ImageView fx:id="verif_DESCRIPTION" fitHeight="17.0" fitWidth="17.0" layoutX="508.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="BtClear" layoutX="565.0" layoutY="554.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="57.0" text="Clear" />
+      <ComboBox fx:id="combobox" layoutX="535.0" layoutY="255.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

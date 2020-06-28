@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.btnAjout{
+	-fx-background-color:  #3cbc53;
+}
+
+.background{
+	-fx-background-color: #979899 ;
+}
+
+.btnSupprimer{
+       -fx-background-color:  #ff4d4d;
+}
+
+.btnEnregistrer {
+    -fx-background-color: #e7e7e7
+        
+}

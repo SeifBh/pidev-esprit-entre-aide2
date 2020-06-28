@@ -1,0 +1,60 @@
+{% extends ":default:test.html.twig" %}
+
+
+{% block title %}Evenements{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="big-div">
+        <h1>Liste des évènements</h1>
+    </div>
+    <center>
+        <br>
+        <br>
+        <br>
+
+        <table border="2">
+            <tr>
+                <th> Image </th>
+                <th> Titre </th>
+                <th> Description </th>
+                <th> Date </th>
+                <th> Type </th>
+                <th> Club Organisateur </th>
+            </tr>
+            {% for evt in evts %}
+                <tr>
+                    <td> <img src="{{ asset('uploads/images/' ~ evt.image) }}" height="100px" width="250px"> </td>
+                    <td>{{ evt.titreE }}</td>
+                    <td>{{ evt.descE }}</td>
+                    <td>{{ evt.dateE | date('d-m-y H:i') }}</td>
+                    <td>{{ evt.typeE }}</td>
+                    <td>{{ evt.idClub.nomC }}</td>
+                    {% if is_granted('ROLE_RESPONSABLE_SUPER_ADMIN')
+                    or is_granted('ROLE_ADMIN')
+                    or is_granted('ROLE_RESPONSABLE_CLUB')
+                    or is_granted('ROLE_SUPER_ADMIN')
+                    or is_granted('ROLE_ENSEIGNANT')
+                        or  is_granted('ROLE_ETUDIANT')
+                    %}
+                        <td><A HREF="{{ path('_supprimer_events',{'id': evt.id }) }}" > Supprimer </A></td>
+                        <td><A HREF="{{ path('_modifier_events',{'id':evt.id }) }}" > Modifier </A></td>
+                        <td><A HREF="{{ path('_participer_events',{'id':evt.id }) }}" > Participer </A></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+
+    </center>
+    <p class="important">
+
+    </p>
+{% endblock %}

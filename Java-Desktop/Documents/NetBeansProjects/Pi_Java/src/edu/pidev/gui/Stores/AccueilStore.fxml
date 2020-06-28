@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url('file:C:/Users/Amine/Documents/NetBeansProjects/pi_java/src/Media/bg1.jpg'); -fx-background-repeat: no-repeat; -fx-background-size: cover;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.Stores.AccueilStoreController">
+    <stylesheets>
+        <URL value="@accueilstore.css" />
+    </stylesheets>
+   <children>
+       <AnchorPane fx:id="menu" layoutY="202.0" prefHeight="552.0" prefWidth="114.0">
+         <children>
+            <JFXButton fx:id="logout" layoutX="25.0" layoutY="475.0" onAction="#logout" />
+            <JFXButton fx:id="annonces" layoutX="25.0" layoutY="141.0" onAction="#annonces" />
+            <JFXButton fx:id="spotted" layoutX="25.0" layoutY="386.0" onAction="#spotted" />
+            <JFXButton fx:id="home" buttonType="RAISED" layoutX="25.0" layoutY="50.0" onAction="#home" />
+            <JFXButton fx:id="events" layoutX="29.0" layoutY="219.0" onAction="#events" />
+            <JFXButton fx:id="clubs" layoutX="29.0" layoutY="305.0" onAction="#clubs" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Media/Logo_ESPRIT_-_Tunisie.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="801.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Media/entraide.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="422.0" layoutY="89.0" text="Stores" textFill="#fa0000">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="432.0" layoutY="730.0" prefHeight="21.0" prefWidth="161.0" text="DaVinci Coders © 2018" />
+       <JFXButton fx:id="hideMenu" layoutX="25.0" layoutY="126.0" onAction="#hidemenu" />
+      <JFXButton fx:id="showMenu" layoutX="25.0" layoutY="126.0" onAction="#showmenu" />
+   </children>
+</AnchorPane>

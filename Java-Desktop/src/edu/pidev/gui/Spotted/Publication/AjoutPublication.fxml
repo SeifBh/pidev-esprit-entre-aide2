@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" prefHeight="670.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.AjoutPublicationController">
+
+     <children>
+      <Label layoutX="68.0" layoutY="57.0" text="Publication" />
+      <TextArea fx:id="tfDESCRIPTION" layoutX="139.0" layoutY="40.0" prefHeight="139.0" prefWidth="413.0" promptText="Ecrire une publication" />
+      <Button fx:id="btAJOUTER" layoutX="250.0" layoutY="277.0" mnemonicParsing="false" onAction="#ajoutPublication" prefHeight="45.0" prefWidth="192.0" text="Enregistrer" />
+      <Button fx:id="btAff" layoutX="35.0" layoutY="352.0" mnemonicParsing="false" onAction="#Afficher" text="Liste des publication" />
+      <ImageView fx:id="verif_NOMDECLUB" fitHeight="17.0" fitWidth="17.0" layoutX="424.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_MAILDECLUB" fitHeight="17.0" fitWidth="17.0" layoutX="424.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_IMG" fitHeight="17.0" fitWidth="17.0" layoutX="424.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_IDUSER" fitHeight="17.0" fitWidth="17.0" layoutX="424.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_NBR" fitHeight="17.0" fitWidth="17.0" layoutX="424.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_NOMDECLUB5" fitHeight="17.0" fitWidth="17.0" layoutX="424.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="verif_DESCRIPTION" fitHeight="17.0" fitWidth="17.0" layoutX="397.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="noicon" fitHeight="33.0" fitWidth="38.0" layoutX="432.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="tags" layoutX="139.0" layoutY="188.0" promptText="tag" />
+      <Label layoutX="75.0" layoutY="192.0" text="Tags" />
+   </children>
+</AnchorPane>

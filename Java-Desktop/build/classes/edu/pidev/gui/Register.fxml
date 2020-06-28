@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" opacity="0.8" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #00384d;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.gui.RegisterController">
+    <stylesheets>
+        <URL value="@register.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url('file:C:/Users/Amine/Documents/NetBeansProjects/pi_java/src/Media/bg1.jpg'); -fx-background-repeat: no-repeat; -fx-background-size: cover;">
+         <children>
+            <TextField fx:id="tfnom" layoutX="241.0" layoutY="281.0" prefHeight="25.0" prefWidth="194.0" promptText="Nom" />
+            <TextField fx:id="tfprenom" layoutX="241.0" layoutY="351.0" prefHeight="25.0" prefWidth="194.0" promptText="Prénom" />
+            <TextField fx:id="tfmail" layoutX="241.0" layoutY="413.0" prefHeight="25.0" prefWidth="194.0" promptText="E-mail" />
+            <ListView fx:id="lvrole" layoutX="600.0" layoutY="227.0" prefHeight="94.0" prefWidth="194.0" style="-fx-border-color: #000000;" />
+            <RadioButton fx:id="rsexe1" layoutX="247.0" layoutY="497.0" mnemonicParsing="false" text="male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexegroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rsexe2" layoutX="352.0" layoutY="497.0" mnemonicParsing="false" text="female" toggleGroup="$sexegroup" />
+            <PasswordField fx:id="tfmdp1" layoutX="600.0" layoutY="351.0" prefHeight="26.0" prefWidth="194.0" promptText="Mot de passe " />
+            <PasswordField fx:id="tfmdp2" layoutX="600.0" layoutY="413.0" prefHeight="26.0" prefWidth="194.0" promptText="Mot de passe " />
+            <Text layoutX="598.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous ëtes?:" />
+            <Text layoutX="241.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe :" />
+            <TextField fx:id="username" layoutX="241.0" layoutY="212.0" prefHeight="31.0" prefWidth="194.0" promptText="Pseudo" />
+            <Label layoutX="32.0" layoutY="614.0" prefHeight="38.0" prefWidth="245.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Make your day easier ..." />
+            <Label layoutX="452.0" layoutY="139.0" text="S'enregistrer" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="338.0" layoutY="621.0" text="Déja inscrit?">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnajout" layoutX="603.0" layoutY="492.0" onAction="#ajout" />
+            <JFXButton fx:id="btnannuler" layoutX="716.0" layoutY="492.0" onAction="#annuler" />
+            <JFXButton fx:id="btnlogin" layoutX="520.0" layoutY="620.0" onAction="#login" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="421.0" layoutY="736.0" prefHeight="21.0" prefWidth="161.0" text="DaVinci Coders © 2018" />
+      <ImageView fitHeight="125.0" fitWidth="263.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Media/Logo_ESPRIT_-_Tunisie.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="189.0" fitWidth="263.0" layoutX="757.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Media/entraide.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
